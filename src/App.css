@@ -1,38 +1,192 @@
-.App {
+/* ======= Preserve Original Landing Page Style ======= */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(to bottom, #FF3E1D, #FF541C, #CD191C);
+  color: white;
+  text-align: center;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;   /* Allow vertical scrolling */
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url('../public/images/bg.jpg') no-repeat center center/cover;
+}
+
+.header {
+  position: absolute;
+  top: 5%;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 15px;
+  text-transform: uppercase;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.tagline {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: uppercase;
+  animation: fadeIn 3s ease-in-out;
+  color: #f8f8f8;
+}
+
+/* Countdown & Booting Timer */
+.countdown-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.countdown-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.countdown {
+  font-size: 4.5rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px 40px;
+  border-radius: 15px;
+  animation: slideIn 1.5s ease-in-out;
+  display: inline-block;
+  border: 2px solid white;
+}
+
+/* Login Button */
+.login-btn {
+  position: relative;
+  margin-bottom: 80px;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  background: transparent;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.login-btn:hover,
+.login-btn:active,
+.login-btn:focus {
+  background: black;
+  color: white;
+  text-shadow: none;
+  border-color: black;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ======= New Sections Styling (Isolated) ======= */
+.about,
+.sponsors {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Background for about & sponsors, but they do NOT affect main page */
+.about {
+  background-attachment: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sponsors {
+  
+  background-attachment: fixed;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-size: 1.5rem;
+  max-width: 800px;
+}
+
+/* Sponsors Boxes */
+.sponsor-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.sponsor-box {
+  width: 200px;
+  height: 200px;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sponsor-box:hover {
+  transform: scale(1.1);
+}
+
+.about, .sponsors {
+  min-height: 100vh;
+  width: 100%;
 }
