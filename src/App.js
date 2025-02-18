@@ -53,7 +53,6 @@ const CountdownTimer = () => {
 export default function HackathonUI() {
   return (
     <div className="main-container">
-      {/* Landing Section */}
       <div className="container">
         <div className="header">
           <motion.h2 className="subtitle" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.5 }}>
@@ -71,35 +70,86 @@ export default function HackathonUI() {
         <CountdownTimer />
       </div>
 
-      {/* About Hackathon Section */}
       <section className="about">
         <motion.h2 className="section-title" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          About the Hackathon
+          Innovate & Build — Hack the Retro Way!
         </motion.h2>
         <motion.p className="section-text" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+          A 36 Hour InterDepartmental Hackathon <br />
+          <br></br>
+          Date: <strong>20-02-2025 to 22-02-2025</strong>
         </motion.p>
-      </section>
-
-      {/* Sponsors Section */}
-      <section className="sponsors">
-        <motion.h2 className="section-title" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          Our Sponsors
-        </motion.h2>
-        <div className="sponsor-boxes">
-          {[1, 2, 3].map((index) => (
-            <motion.div
-              key={index}
-              className="sponsor-box"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: index * 0.3 }}
-            >
-              Sponsor {index}
-            </motion.div>
-          ))}
+        
+        <div className="prize-container">
+          <div className="prizeinner">
+            <motion.img
+              className="prize-pool-image"
+              src="/images/podium.png"
+              alt="Prize Pool"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5 }}
+            />
+            <motion.h3 className="prize-pool-text" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+              ₹25,000 Prize Pool
+            </motion.h3>
+          </div>
+          <motion.div className="curve-box" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }}>
+            <h4>What You Can Build:</h4>
+            <ul>
+              <li>AI/ML</li>
+              <li>Web3 & Blockchain</li>
+              <li>Cybersecurity</li>
+              <li>IoT & Robotics</li>
+              <li>Game Development</li>
+              <li>Fintech</li>
+              <li>HealthTech</li>
+            </ul>
+          </motion.div>
         </div>
       </section>
+
+       <section className="sponsors">
+      {/* Organized By Section with Parallax Effect */}
+      <div className="organized-by parallax">
+        <h3 className="oragniser">
+          Organized by Department of CSE in collaboration with IIC
+          <img src="/images/iic-logo.png" alt="IIC Logo" className="iic-logo" />
+        </h3>
+      </div>
+
+      {/* Sponsors Section */}
+      <motion.h2
+        className="section-title"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Our Sponsors
+      </motion.h2>
+
+      <div className="sponsor-boxes">
+        {["poorvika.png", "blackthunder.png", "xyz.png"].map((image, index) => (
+          <motion.div
+            key={index}
+            className="sponsor-box parallax"
+            style={{ backgroundImage: `url("/images/${image}")` }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: index * 0.3 }}
+          />
+        ))}
+      </div>
+
+      {/* Contact Information */}
+      <div className="contact-info parallax">
+        <h3>Contact Us</h3>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+      </div>
+    </section>
     </div>
   );
 }
+
