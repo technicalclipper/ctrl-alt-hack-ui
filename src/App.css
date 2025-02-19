@@ -352,7 +352,7 @@ body {
   }
 
   .title {
-    font-size: 3rem; /* Reduced from 5rem */
+    font-size: 2rem; /* Reduced from 5rem */
     font-weight: bold;
     margin-top: 15px;
     text-transform: uppercase;
@@ -362,9 +362,10 @@ body {
   
   /* Countdown Fix */
   .countdown {
-    font-size: 3rem; /* Reduced from 4.5rem */
+    font-size: 2rem; /* Reduced from 4.5rem */
     padding: 15px 30px; /* Reduced padding */
     border-radius: 10px; /* Adjusted for a more compact look */
+    height:8%;
   }
 }
 /* Title Fix */
