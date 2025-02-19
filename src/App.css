@@ -84,6 +84,8 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+ 
+
 }
 
 .login-btn:hover {

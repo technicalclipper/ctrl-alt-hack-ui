@@ -132,7 +132,7 @@ export default function HackathonUI() {
       </motion.h2>
 
       <div className="sponsor-boxes">
-        {["poorvika.png", "blackthunder.png", "xyz.png"].map((image, index) => (
+        {["poorvika.png", "blackthunder.png","kaar.jpg", "xyz.png"].map((image, index) => (
           <motion.div
             key={index}
             className="sponsor-box parallax"
