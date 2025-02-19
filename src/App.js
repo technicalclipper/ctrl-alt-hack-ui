@@ -4,7 +4,7 @@ import "./App.css";
 
 const CountdownTimer = () => {
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2025-03-01T00:00:00").getTime();
+    const targetDate = new Date("2025-02-20T10:10:00").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 
@@ -97,13 +97,13 @@ export default function HackathonUI() {
           <motion.div className="curve-box" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1.5 }}>
             <h4>What You Can Build:</h4>
             <ul>
-              <li>AI/ML</li>
-              <li>Web3 & Blockchain</li>
-              <li>Cybersecurity</li>
-              <li>IoT & Robotics</li>
-              <li>Game Development</li>
-              <li>Fintech</li>
-              <li>HealthTech</li>
+              <li>AI/ML🤖</li>
+              <li>Web3 & Blockchain🪙</li>
+              <li>Cybersecurity🧑‍💻</li>
+              <li>IoT & Robotics📲</li>
+              <li>Game Development🎮</li>
+              <li>Fintech🏦</li>
+              <li>HealthTech🏥</li>
             </ul>
           </motion.div>
         </div>
@@ -113,8 +113,11 @@ export default function HackathonUI() {
       {/* Organized By Section with Parallax Effect */}
       <div className="organized-by parallax">
         <h3 className="oragniser">
-          Organized by Department of CSE in collaboration with IIC
-          <img src="/images/iic-logo.png" alt="IIC Logo" className="iic-logo" />
+          <div className="organisertext">Organized by Department of CSE in collaboration with IIC</div>
+          <div className="logodiv">
+            <img src="/images/licet.jpg" alt="IIC Logo" className="licet-logo" />
+            <img src="/images/iic.png" alt="IIC Logo" className="iic-logo" />
+          </div>
         </h3>
       </div>
 
@@ -142,11 +145,13 @@ export default function HackathonUI() {
       </div>
 
       {/* Contact Information */}
-      <div className="contact-info parallax">
-        <h3>Contact Us</h3>
-        <p><strong>Name:</strong> John Doe</p>
-        <p><strong>Phone:</strong> +91 98765 43210</p>
-        <p><strong>Email:</strong> johndoe@example.com</p>
+      <div className="footercenter">
+        <div className="contact-info parallax">
+          <h3>Contact Us</h3>
+          <p><strong>Name:</strong> Sairam M R</p>
+          <p><strong>Phone:</strong> +91 93421 99098</p>
+          <p><strong>Email:</strong> sairam.26csb@licet.ac.in</p>
+        </div>
       </div>
     </section>
     </div>
